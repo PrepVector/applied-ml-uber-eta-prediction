@@ -1,5 +1,5 @@
 # Food Delivery Time Prediction using ML
-![food_delivery_README](https://github.com/PrepVector/Applied-ML/assets/82357659/570c3aa8-28d8-4fa6-af00-9e5ab9d993e9)
+![food_delivery_README]()
 
 ## Overview
 
@@ -52,17 +52,17 @@ The entire process of tackling the problem and progressing towards a solution wa
 
 **Notebooks:**
 
-1. [problem_statement](https://github.com/PrepVector/Applied-ML/blob/food_delivery_time_prediction/notebooks/problem_statement.ipynb)
+1. [problem_statement]()
 
-2. [complete_pipeline](https://github.com/PrepVector/Applied-ML/blob/food_delivery_time_prediction/notebooks/complete_pipeline.ipynb)
+2. [complete_pipeline]()
 
-3. [data_cleaning](https://github.com/PrepVector/Applied-ML/blob/food_delivery_time_prediction/notebooks/data_cleaning.ipynb)
+3. [data_cleaning]()
 
-4. [data_eda](https://github.com/PrepVector/Applied-ML/blob/food_delivery_time_prediction/notebooks/data_eda.ipynb)
+4. [data_eda]()
 
-5. [feature_engineering](https://github.com/PrepVector/Applied-ML/blob/food_delivery_time_prediction/notebooks/feature_engineering.ipynb)
+5. [feature_engineering]()
 
-6. [preprocessing_modelling_feature_selection](https://github.com/PrepVector/Applied-ML/blob/food_delivery_time_prediction/notebooks/preprocessing_modelling_feature_selection.ipynb)
+6. [preprocessing_modelling_feature_selection]()
 
 These notebooks acted as thorough documentation of the methodologies utilized, detailing any preprocessing techniques applied to the data, transformation methods employed for features, and strategies implemented for feature engineering.
 
