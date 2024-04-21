@@ -60,7 +60,7 @@ The entire process of tackling the problem and progressing towards a solution wa
 
 4. [data_eda](https://github.com/PrepVector/applied-ml-uber-eta-prediction/blob/main/notebooks/02_data_eda.ipynb)
 
-5. [feature_engineering]()
+5. [feature_engineering](https://github.com/PrepVector/applied-ml-uber-eta-prediction/blob/main/notebooks/03_feature_engineering.ipynb)
 
 6. [preprocessing_modelling_feature_selection]()
 
