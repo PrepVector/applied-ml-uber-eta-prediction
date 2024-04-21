@@ -18,6 +18,8 @@ class DataProcessing:
 
         Parameters:
         df (pandas.DataFrame): The input DataFrame.
+
+        Implementation details omitted
         """
 
     def extract_feature_value(self, df):
@@ -28,6 +30,7 @@ class DataProcessing:
         df (pandas.DataFrame): The input DataFrame.
 
         refer notebook for reference.
+        Implementation details omitted
         """
 
     def extract_label_value(self, df):
@@ -38,6 +41,7 @@ class DataProcessing:
         df (pandas.DataFrame): The input DataFrame.
         
         refer notebook for reference.
+        Implementation details omitted
         """
 
     def drop_columns(self, df):
@@ -57,6 +61,7 @@ class DataProcessing:
         df (pandas.DataFrame): The input DataFrame.
         
         refer notebook for reference.
+        Implementation details omitted
         """
 
     def handle_null_values(self, df):
@@ -80,6 +85,7 @@ class DataProcessing:
         df (pandas.DataFrame): The input DataFrame.
         
         refer notebook for reference.
+        Implementation details omitted
         """
 
     def calculate_time_diff(self, df):
@@ -90,6 +96,7 @@ class DataProcessing:
         df (pandas.DataFrame): The input DataFrame.
         
         refer notebook for reference.
+        Implementation details omitted
         """
 
     def deg_to_rad(self, degrees):
@@ -107,6 +114,11 @@ class DataProcessing:
 
         Returns:
         float: The distance between the two coordinates in kilometers.
+        
+        
+        
+        refer notebook for reference.
+        Implementation details omitted
         """
 
     def calculate_distance(self, df):
@@ -128,11 +140,18 @@ class DataProcessing:
 
         Returns:
         dict: A dictionary containing the label encoders for each categorical column.
+
+        refer notebook for reference.
+        Implementation detail omitted
         """
 
     def data_split(self, X, y):
         """
         Logic
+
+        
+        refer notebook for reference.
+        Implementation detail omitted
         """
         pass
 
@@ -140,6 +159,10 @@ class DataProcessing:
         """
         Logic
         return X_train, X_test, scaler
+
+        
+        refer notebook for reference.
+        Implementation detail omitted
         """
         pass
 
