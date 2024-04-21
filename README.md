@@ -58,7 +58,7 @@ The entire process of tackling the problem and progressing towards a solution wa
 
 3. [data_cleaning](https://github.com/PrepVector/applied-ml-uber-eta-prediction/blob/main/notebooks/01_data_cleaning.ipynb)
 
-4. [data_eda]()
+4. [data_eda](https://github.com/PrepVector/applied-ml-uber-eta-prediction/blob/main/notebooks/02_data_eda.ipynb)
 
 5. [feature_engineering]()
 
