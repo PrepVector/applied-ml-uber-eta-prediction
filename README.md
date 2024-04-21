@@ -1,5 +1,5 @@
 # Food Delivery Time Prediction using ML
-![food_delivery_README]()
+![food_delivery_README](https://github.com/PrepVector/applied-ml-uber-eta-prediction/blob/main/assets/food_delivery_README.jpg)
 
 ## Overview
 
