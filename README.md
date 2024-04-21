@@ -80,7 +80,7 @@ Moreover, the notebooks recorded the precise algorithms, models, or techniques e
 1. Clone the repository:
 
     ```bash
-    git clone  https://github.com/PrepVector/Applied-ML.git
+    git clone  https://github.com/PrepVector/applied-ml-uber-eta-prediction.git
     ```
 
 2. Build the Docker image:
