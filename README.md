@@ -54,7 +54,7 @@ The entire process of tackling the problem and progressing towards a solution wa
 
 1. [problem_statement](https://github.com/PrepVector/applied-ml-uber-eta-prediction/blob/main/notebooks/00_problem_statement.ipynb)
 
-2. [complete_pipeline]()
+2. [complete_pipeline](https://github.com/PrepVector/applied-ml-uber-eta-prediction/blob/main/notebooks/05_complete_pipeline.ipynb)
 
 3. [data_cleaning](https://github.com/PrepVector/applied-ml-uber-eta-prediction/blob/main/notebooks/01_data_cleaning.ipynb)
 
