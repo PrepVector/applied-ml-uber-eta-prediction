@@ -18,31 +18,30 @@ class DataProcessing:
 
         Parameters:
         df (pandas.DataFrame): The input DataFrame.
-
-        Implementation details omitted
         """
+        pass
+        # Implementation details omitted
+
 
     def extract_feature_value(self, df):
         """
         Extract feature values from the input DataFrame.
 
         Parameters:
-        df (pandas.DataFrame): The input DataFrame.
-
-        refer notebook for reference.
-        Implementation details omitted
+        df (pandas.DataFrame): The input DataFrame.        
         """
+        pass
+        # Implementation details omitted
 
     def extract_label_value(self, df):
         """
         Extract the label value 'Time_taken(min)' from the input DataFrame.
 
         Parameters:
-        df (pandas.DataFrame): The input DataFrame.
-        
-        refer notebook for reference.
-        Implementation details omitted
+        df (pandas.DataFrame): The input DataFrame.        
         """
+        pass
+        # Implementation details omitted
 
     def drop_columns(self, df):
         df.drop(['ID', 'Delivery_person_ID'], axis=1, inplace=True)
@@ -60,9 +59,9 @@ class DataProcessing:
         Parameters:
         df (pandas.DataFrame): The input DataFrame.
         
-        refer notebook for reference.
-        Implementation details omitted
         """
+        pass
+        # Implementation details omitted
 
     def handle_null_values(self, df):
         df['Delivery_person_Age'].fillna(np.random.choice(df['Delivery_person_Age']), inplace=True)
@@ -84,9 +83,9 @@ class DataProcessing:
         Parameters:
         df (pandas.DataFrame): The input DataFrame.
         
-        refer notebook for reference.
-        Implementation details omitted
         """
+        pass
+        # Implementation details omitted
 
     def calculate_time_diff(self, df):
         """
@@ -95,9 +94,9 @@ class DataProcessing:
         Parameters:
         df (pandas.DataFrame): The input DataFrame.
         
-        refer notebook for reference.
-        Implementation details omitted
         """
+        pass
+        # Implementation details omitted
 
     def deg_to_rad(self, degrees):
         return degrees * (np.pi / 180)
@@ -114,12 +113,9 @@ class DataProcessing:
 
         Returns:
         float: The distance between the two coordinates in kilometers.
-        
-        
-        
-        refer notebook for reference.
-        Implementation details omitted
         """
+        pass
+        # Implementation details omitted
 
     def calculate_distance(self, df):
         df['distance'] = np.nan
@@ -140,31 +136,26 @@ class DataProcessing:
 
         Returns:
         dict: A dictionary containing the label encoders for each categorical column.
-
-        refer notebook for reference.
-        Implementation detail omitted
         """
+        pass
+        # Implementation detail omitted
 
     def data_split(self, X, y):
         """
         Logic
-
-        
-        refer notebook for reference.
-        Implementation detail omitted
         """
         pass
+        # Implementation detail omitted
 
     def standardize(self, X_train, X_test):
         """
         Logic
-        return X_train, X_test, scaler
-
         
-        refer notebook for reference.
-        Implementation detail omitted
+        Returns:
+        X_train, X_test, scaler
         """
         pass
+        # Implementation detail omitted
 
     def cleaning_steps(self, df):
         self.update_column_name(df)
