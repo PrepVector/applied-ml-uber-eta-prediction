@@ -52,7 +52,7 @@ The entire process of tackling the problem and progressing towards a solution wa
 
 **Notebooks:**
 
-1. [problem_statement]()
+1. [problem_statement](https://github.com/PrepVector/applied-ml-uber-eta-prediction/blob/main/notebooks/00_problem_statement.ipynb)
 
 2. [complete_pipeline]()
 
