@@ -22,4 +22,4 @@ EXPOSE 8501
 COPY . .
 
 # Run the application.
-ENTRYPOINT ["streamlit", "run", "app/app.py"]
+ENTRYPOINT ["streamlit", "run", "app.py"]
