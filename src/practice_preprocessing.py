@@ -18,7 +18,11 @@ class DataProcessing:
 
         Parameters:
         df (pandas.DataFrame): The input DataFrame.
+        
+        Returns:
+        None
         """
+        #print(df.head())
         pass
         # Implementation details omitted
 
@@ -28,8 +32,13 @@ class DataProcessing:
         Extract feature values from the input DataFrame.
 
         Parameters:
-        df (pandas.DataFrame): The input DataFrame.        
+        df (pandas.DataFrame): The input DataFrame.
+
+        
+        Returns:
+        None
         """
+        #print(df.head())
         pass
         # Implementation details omitted
 
@@ -38,8 +47,12 @@ class DataProcessing:
         Extract the label value 'Time_taken(min)' from the input DataFrame.
 
         Parameters:
-        df (pandas.DataFrame): The input DataFrame.        
+        df (pandas.DataFrame): The input DataFrame.
+        
+        Returns:
+        None
         """
+        #print(df.head())
         pass
         # Implementation details omitted
 
@@ -58,8 +71,12 @@ class DataProcessing:
 
         Parameters:
         df (pandas.DataFrame): The input DataFrame.
+
         
+        Returns:
+        None        
         """
+        #print(df.head())
         pass
         # Implementation details omitted
 
@@ -82,8 +99,12 @@ class DataProcessing:
 
         Parameters:
         df (pandas.DataFrame): The input DataFrame.
+
         
+        Returns:
+        None        
         """
+        #print(df.head())
         pass
         # Implementation details omitted
 
@@ -93,8 +114,12 @@ class DataProcessing:
 
         Parameters:
         df (pandas.DataFrame): The input DataFrame.
+
         
+        Returns:
+        None        
         """
+        #print(df.head())
         pass
         # Implementation details omitted
 
@@ -114,6 +139,7 @@ class DataProcessing:
         Returns:
         float: The distance between the two coordinates in kilometers.
         """
+        #print(df.head())
         pass
         # Implementation details omitted
 
@@ -137,13 +163,18 @@ class DataProcessing:
         Returns:
         dict: A dictionary containing the label encoders for each categorical column.
         """
+        #print(df.head())
         pass
         # Implementation detail omitted
 
     def data_split(self, X, y):
         """
         Logic
+
+        Returns:
+        X_train, X_test, y_train, y_test        
         """
+        #print(df.head())
         pass
         # Implementation detail omitted
 
@@ -154,6 +185,7 @@ class DataProcessing:
         Returns:
         X_train, X_test, scaler
         """
+        #print(df.head())
         pass
         # Implementation detail omitted
 
