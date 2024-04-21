@@ -62,7 +62,7 @@ The entire process of tackling the problem and progressing towards a solution wa
 
 5. [feature_engineering](https://github.com/PrepVector/applied-ml-uber-eta-prediction/blob/main/notebooks/03_feature_engineering.ipynb)
 
-6. [preprocessing_modelling_feature_selection]()
+6. [preprocessing_modelling_feature_selection](https://github.com/PrepVector/applied-ml-uber-eta-prediction/blob/main/notebooks/04_preprocessing_modelling_feature_selection.ipynb)
 
 These notebooks acted as thorough documentation of the methodologies utilized, detailing any preprocessing techniques applied to the data, transformation methods employed for features, and strategies implemented for feature engineering.
 
