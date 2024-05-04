@@ -24,7 +24,7 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 dp.evaluate_model(y_test, y_pred)
 
-# Save Model
+# Create model.pkl and Save Model
 with open("./model/model.pickle", 'wb') as f:
     pickle.dump((model, label_encoders, scaler), f)
 print("Model pickle saved to model folder")
