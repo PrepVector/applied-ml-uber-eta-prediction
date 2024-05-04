@@ -60,6 +60,14 @@ class DataProcessing:
         df.drop(['ID', 'Delivery_person_ID'], axis=1, inplace=True)
 
     def update_datatype(self, df):
+        """
+        Updates the data types of the following columns in the given DataFrame df:
+        - 'Delivery_person_Age' to float64
+        - 'Delivery_person_Ratings' to float64
+        - 'multiple_deliveries' to float64
+        - 'Order_Date' to datetime with format "%d-%m-%Y"
+        """
+        
         df['Delivery_person_Age'] = df['Delivery_person_Age'].astype('float64')
         df['Delivery_person_Ratings'] = df['Delivery_person_Ratings'].astype('float64')
         df['multiple_deliveries'] = df['multiple_deliveries'].astype('float64')
