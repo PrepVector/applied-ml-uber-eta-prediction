@@ -144,6 +144,13 @@ class DataProcessing:
         # Implementation details omitted
 
     def calculate_distance(self, df):
+        """
+        Calculates the distance between the restaurant and delivery location in the given DataFrame df:
+        - Creates a new 'distance' column
+        - Calculates the distance using the 'Restaurant_latitude', 'Restaurant_longitude', 'Delivery_location_latitude', and 'Delivery_location_longitude' columns
+        - Converts the 'distance' column to int64
+        """
+        
         df['distance'] = np.nan
 
         for i in range(len(df)):
