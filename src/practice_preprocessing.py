@@ -77,11 +77,6 @@ class DataProcessing:
         - 'multiple_deliveries' to float64
         - 'Order_Date' to datetime with format "%d-%m-%Y"
         """
-        
-        df['Delivery_person_Age'] = df['Delivery_person_Age'].astype('float64')
-        df['Delivery_person_Ratings'] = df['Delivery_person_Ratings'].astype('float64')
-        df['multiple_deliveries'] = df['multiple_deliveries'].astype('float64')
-        df['Order_Date'] = pd.to_datetime(df['Order_Date'], format="%d-%m-%Y")
 
     def convert_nan(self, df):
         """
@@ -95,7 +90,6 @@ class DataProcessing:
         None        
         """
         #print("Initial dataframe", df)
-        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
         #print("After", df.head())
         pass
         # Implementation details omitted
