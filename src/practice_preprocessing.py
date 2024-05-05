@@ -22,7 +22,9 @@ class DataProcessing:
         Returns:
         None
         """
-        #print(df.head())
+        #print("Initial dataframe", df)
+        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
+        #print("After", df.head())
         pass
         # Implementation details omitted
 
@@ -38,7 +40,9 @@ class DataProcessing:
         Returns:
         None
         """
-        #print(df.head())
+        #print("Initial dataframe", df)
+        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
+        #print("After", df.head())
         pass
         # Implementation details omitted
 
@@ -52,7 +56,9 @@ class DataProcessing:
         Returns:
         None
         """
-        #print(df.head())
+        #print("Initial dataframe", df)
+        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
+        #print("After", df.head())
         pass
         # Implementation details omitted
 
@@ -84,7 +90,9 @@ class DataProcessing:
         Returns:
         None        
         """
-        #print(df.head())
+        #print("Initial dataframe", df)
+        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
+        #print("After", df.head())
         pass
         # Implementation details omitted
 
@@ -112,7 +120,9 @@ class DataProcessing:
         Returns:
         None        
         """
-        #print(df.head())
+        #print("Initial dataframe", df)
+        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
+        #print("After", df.head())
         pass
         # Implementation details omitted
 
@@ -152,7 +162,9 @@ class DataProcessing:
         Returns:
         float: The distance between the two coordinates in kilometers.
         """
-        #print(df.head())
+        #print("Initial dataframe", df)
+        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
+        #print("After", df.head())
         pass
         # Implementation details omitted
 
@@ -183,7 +195,9 @@ class DataProcessing:
         Returns:
         dict: A dictionary containing the label encoders for each categorical column.
         """
-        #print(df.head())
+        #print("Initial dataframe", df)
+        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
+        #print("After", df.head())
         pass
         # Implementation detail omitted
 
@@ -194,7 +208,9 @@ class DataProcessing:
         Returns:
         X_train, X_test, y_train, y_test        
         """
-        #print(df.head())
+        #print("Initial dataframe", df)
+        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
+        #print("After", df.head())
         pass
         # Implementation detail omitted
 
@@ -205,7 +221,9 @@ class DataProcessing:
         Returns:
         X_train, X_test, scaler
         """
-        #print(df.head())
+        #print("Initial dataframe", df)
+        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
+        #print("After", df.head())
         pass
         # Implementation detail omitted
 
