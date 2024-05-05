@@ -41,7 +41,11 @@ class DataProcessing:
         None
         """
         #print("Initial dataframe", df)
-        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
+        
+        # - Extracts the weather condition value from the 'Weather_conditions' column
+        # - Creates a new 'City_code' column from the 'Delivery_person_ID' column
+        # - Strips leading/trailing whitespace from object columns
+        
         #print("After", df.head())
         pass
         # Implementation details omitted
