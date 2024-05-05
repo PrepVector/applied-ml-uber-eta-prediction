@@ -25,6 +25,7 @@ class DataProcessing:
         #print("Initial dataframe", df)
         # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
         #print("After", df.head())
+        
         pass
         # Implementation details omitted
 
@@ -47,6 +48,7 @@ class DataProcessing:
         # - Strips leading/trailing whitespace from object columns
         
         #print("After", df.head())
+        
         pass
         # Implementation details omitted
 
@@ -60,9 +62,11 @@ class DataProcessing:
         Returns:
         None
         """
+        
         #print("Initial dataframe", df)
         # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
         #print("After", df.head())
+        
         pass
         # Implementation details omitted
 
@@ -89,8 +93,10 @@ class DataProcessing:
         Returns:
         None        
         """
+        
         #print("Initial dataframe", df)
         #print("After", df.head())
+        
         pass
         # Implementation details omitted
 
@@ -118,9 +124,14 @@ class DataProcessing:
         Returns:
         None        
         """
-        #print("Initial dataframe", df)
-        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
+        
+        #print("Initial dataframe", df)        
+        # Extracts date features from the 'Order_Date' column in the given DataFrame df:
+        # - 'is_weekend' (boolean): True if the day of the week is Saturday or Sunday
+        # - 'month_intervals' (categorical): 'start_month' if day <= 10, 'middle_month' if day <= 20, 'end_month' otherwise
+        # - 'year_quarter' (categorical): The quarter of the year (1, 2, 3, or 4)        
         #print("After", df.head())
+        
         pass
         # Implementation details omitted
 
@@ -160,9 +171,11 @@ class DataProcessing:
         Returns:
         float: The distance between the two coordinates in kilometers.
         """
+        
         #print("Initial dataframe", df)
-        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
+        # Use haversine formula or geopy
         #print("After", df.head())
+        
         pass
         # Implementation details omitted
 
@@ -193,9 +206,10 @@ class DataProcessing:
         Returns:
         dict: A dictionary containing the label encoders for each categorical column.
         """
+        
         #print("Initial dataframe", df)
-        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
         #print("After", df.head())
+        
         pass
         # Implementation detail omitted
 
@@ -207,8 +221,8 @@ class DataProcessing:
         X_train, X_test, y_train, y_test        
         """
         #print("Initial dataframe", df)
-        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
         #print("After", df.head())
+        
         pass
         # Implementation detail omitted
 
@@ -220,7 +234,6 @@ class DataProcessing:
         X_train, X_test, scaler
         """
         #print("Initial dataframe", df)
-        # use the rename function of the pandas library and replace the column name to Weather_conditions in the same dataset
         #print("After", df.head())
         pass
         # Implementation detail omitted
