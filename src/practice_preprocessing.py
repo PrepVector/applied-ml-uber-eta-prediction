@@ -118,18 +118,23 @@ class DataProcessing:
 
     def calculate_time_diff(self, df):
         """
-        Calculate the time difference between various time-related columns in the input DataFrame.
-
-        Parameters:
-        df (pandas.DataFrame): The input DataFrame.
-
-        
-        Returns:
-        None        
+        Calculates the time difference between order placement and order pickup in the given DataFrame df:
+        - Converts 'Time_Orderd' and 'Time_Order_picked' to timedelta
+        - Calculates 'Time_Order_picked_formatted' and 'Time_Ordered_formatted' based on 'Order_Date'
+        - Calculates 'order_prepare_time' as the difference between 'Time_Order_picked_formatted' and 'Time_Ordered_formatted' in minutes
+        - Fills null values in 'order_prepare_time' with the column median
+        - Drops 'Time_Orderd', 'Time_Order_picked', 'Time_Ordered_formatted', 'Time_Order_picked_formatted', and 'Order_Date' columns
         """
-        #print(df.head())
-        pass
-        # Implementation details omitted
+        
+        df['Time_Orderd'] = pd.to_timedelta(df['Time_Orderd'])
+        df['Time_Order_picked'] = pd.to_timedelta(df['Time_Order_picked'])
+
+        df['Time_Order_picked_formatted'] = df['Order_Date'] + pd.to_timedelta(np.where(df['Time_Order_picked'] < df['Time_Orderd'], 1, 0), unit='D') + df['Time_Order_picked']
+        df['Time_Ordered_formatted'] = df['Order_Date'] + df['Time_Orderd']
+        df['order_prepare_time'] = (df['Time_Order_picked_formatted'] - df['Time_Ordered_formatted']).dt.total_seconds() / 60
+
+        df['order_prepare_time'].fillna(df['order_prepare_time'].median(), inplace=True)
+        df.drop(['Time_Orderd', 'Time_Order_picked', 'Time_Ordered_formatted', 'Time_Order_picked_formatted', 'Order_Date'], axis=1, inplace=True)
 
     def deg_to_rad(self, degrees):
         return degrees * (np.pi / 180)
