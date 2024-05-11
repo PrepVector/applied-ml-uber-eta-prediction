@@ -17,6 +17,35 @@ This predictive model leverages machine learning algorithms and statistical tech
 
 Regular updates with the latest delivery data ensure the model remains relevant and adaptable to changing conditions, making it a dynamic and responsive system. In real-time, as new orders are received and delivery partners are assigned, the model recalculates and adjusts estimated delivery times, providing customers with up-to-date and reliable information.</font>
 
+## Repository Structure
+
+1. **assets**: Contains assets such as images of formulas, frontend etc.
+
+2. **config**: Centralized location for configuration files.
+
+3. **data**: Stores different versions of data in distinct folders.
+    - **raw**: Original, unprocessed data.
+    - **interim**: Intermediate data during processing.
+    - **processed**: Processed and cleaned data.
+    - **uploaded**: Location for uploaded data.
+
+4. **models**: Directory for saving and loading ASR models.
+
+5. **notebooks**: Google Colab notebooks for ASR and Whisper fine-tuning.
+
+6. **references**: Contains a document with references used in the project.
+
+7. **src**: Main source code directory with the following subfolders:
+    - **data_processing**: Functions for processing audio files.
+    - **feature_engineering**: Extracts or engineers new features from audio.
+    - **evaluation**: Evaluation scripts for assessing model performance.
+    - **model**: Contains code to load ASR models.
+    - **utils**: Helper and utility functions.
+
+8. **main.py**: Placeholder file for model fine-tuning and other functionalities.
+
+9. **Dockerfile**: Configuration for setting up the project in a Docker container.
+
 ## Data-dictionary
 
 |Column|Description |
