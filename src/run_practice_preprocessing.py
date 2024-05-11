@@ -25,6 +25,8 @@ y_pred = model.predict(X_test)
 dp.evaluate_model(y_test, y_pred)
 
 # Create model.pkl and Save Model
-with open("./model/model.pickle", 'wb') as f:
+with open("./model/test_model.pickle", 'wb') as f:
     pickle.dump((model, label_encoders, scaler), f)
 print("Model pickle saved to model folder")
+
+## Use test_model.pkl file in the predict.py
