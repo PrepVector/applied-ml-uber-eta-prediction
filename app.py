@@ -297,6 +297,8 @@ if __name__ == "__main__":
         order_pickup_date_time = datetime.datetime.strptime(f'{order_date} {order_pickup_time}', '%d-%m-%Y %H:%M:%S')
 
         # get predictions
+        # this is the output of the XGBRegressor
+      
         total_delivery_minutes = round(predict.predict(input_df)[0], 2)  
         minutes = int(total_delivery_minutes)
         seconds = int((total_delivery_minutes - minutes) * 60)
