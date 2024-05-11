@@ -36,13 +36,13 @@ Regular updates with the latest delivery data ensure the model remains relevant 
 6. **references**: Contains documents with references used in the project.
 
 7. **src**: Main source code directory with the following subfolders:
-    - **data_processing**: Functions for processing audio files.
-    - **feature_engineering**: Extracts or engineers new features from audio.
-    - **evaluation**: Evaluation scripts for assessing model performance.
-    - **model**: Contains code to load ASR models.
-    - **utils**: Helper and utility functions.
+    - **preprocessing**: Functionality to preprocess, feature engineering, modelling on a raw dataset
+    - **build_model**: Creates and saves the model.pkl file from the preprocessed dataset
+    - **predict**: Predictions of saved model.pkl on new user input
+    - **practice_preprocessing**: Replica of preprocessing.py (for student)
+    - **run_practice_preprocessing**: Replica of build_model.py (for student)
 
-8. **main.py**: Placeholder file for model fine-tuning and other functionalities.
+8. **app.py**: Streamlit frontend
 
 9. **Dockerfile**: Configuration for setting up the project in a Docker container.
 
