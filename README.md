@@ -21,7 +21,7 @@ Regular updates with the latest delivery data ensure the model remains relevant 
 
 1. **assets**: Contains assets such as images of formulas, frontend etc.
 
-2. **config**: Centralized location for configuration files.
+2. **configs**: Centralized location for configuration files.
 
 3. **data**: Stores different versions of data in distinct folders.
     - **raw**: Original, unprocessed data.
@@ -29,7 +29,7 @@ Regular updates with the latest delivery data ensure the model remains relevant 
     - **processed**: Processed and cleaned data.
     - **uploaded**: Location for uploaded data.
 
-4. **models**: Directory for saving and loading ASR models.
+4. **models**: Directory for saving and loading the model.pkl file.
 
 5. **notebooks**: Google Colab notebooks for ASR and Whisper fine-tuning.
 
