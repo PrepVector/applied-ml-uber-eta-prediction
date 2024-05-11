@@ -24,16 +24,16 @@ Regular updates with the latest delivery data ensure the model remains relevant 
 2. **configs**: Centralized location for configuration files.
 
 3. **data**: Stores different versions of data in distinct folders.
-    - **raw**: Original, unprocessed data.
-    - **interim**: Intermediate data during processing.
-    - **processed**: Processed and cleaned data.
-    - **uploaded**: Location for uploaded data.
+    - **data_after_feature_engineering.csv**: Dataset created after feature engineering
+    - **data_cleaned.csv**: Dataset created after data cleaning
+    - **raw_data.csv**: Raw dataset
+    - **test.csv**: Testing dataset (can be optional)
 
-4. **models**: Directory for saving and loading the model.pkl file.
+4. **model**: Directory for saving and loading the model.pkl file.
 
-5. **notebooks**: Google Colab notebooks for ASR and Whisper fine-tuning.
+5. **notebooks**: Google Colab notebooks for cleaning, preprocessing, feature engineering
 
-6. **references**: Contains a document with references used in the project.
+6. **references**: Contains documents with references used in the project.
 
 7. **src**: Main source code directory with the following subfolders:
     - **data_processing**: Functions for processing audio files.
