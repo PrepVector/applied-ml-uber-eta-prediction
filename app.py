@@ -33,6 +33,7 @@ def haversine(lon1, lat1, lon2, lat2):
     c = 2 * asin(sqrt(a))
     return c * r
 
+
 def calculate_delivery_location(restaurant_latitude, restaurant_longitude, distance, direction):
     """
     Calculate the delivery location's latitude and longitude based on the distance and direction from the restaurant location
@@ -57,6 +58,7 @@ def calculate_delivery_location(restaurant_latitude, restaurant_longitude, dista
     delivery_longitude = degrees(delivery_longitude_radians)
 
     return delivery_latitude, delivery_longitude
+
 
 def validate_location_inputs(delivery_location_latitude, delivery_location_longitude,  restaurant_latitude, restaurant_longitude):
     """
@@ -86,6 +88,7 @@ def validate_location_inputs(delivery_location_latitude, delivery_location_longi
             valid_inputs = False
 
     return valid_inputs
+
 
 def get_user_input(df):
 
@@ -129,6 +132,7 @@ def get_user_input(df):
                 restaurant_locations[city] = {}
             restaurant_locations[city][restaurant_number] = (longitude, latitude)
 
+    
     # Get user input for restaurant
     city_code = st.sidebar.selectbox('What is the city name of delivery?', sorted(restaurant_locations.keys()))
     restaurant_numbers = sorted(list(restaurant_locations[city_code].keys()))
@@ -161,7 +165,6 @@ def get_user_input(df):
                                                    float(df['Delivery_person_Ratings'].mean()))        
         
         
-        
         # Getting input for vehicle type, condition of the delivery person
         vehicle = st.sidebar.selectbox('What type of vehicle delivery person has?',
                                        df['Type_of_vehicle'].unique())
@@ -180,13 +183,11 @@ def get_user_input(df):
                                                  vehicle_condition_options)
         
         
-        
         # Getting input for the city type, which city of India
         st.sidebar.write(f"**City Related Information**")
         city_type = st.sidebar.selectbox(f'Which type of **city type** it is?',
                                     df['City_type'].unique())
         
-
 
         # Getting input for road, weather
         st.sidebar.write(f"**Weather Conditions/Event Related Information**")
@@ -221,6 +222,7 @@ def get_user_input(df):
             st.sidebar.write(f"**No festival**")
 
         submit_button = st.sidebar.button("Submit")        
+        
         
         # the user input is put into a dataframe and then sent to model for predictions
         if submit_button:
