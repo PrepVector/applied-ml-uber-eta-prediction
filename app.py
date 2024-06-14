@@ -6,13 +6,8 @@ import sys, os
 import re
 from src import predict
 from src import preprocessing
-
 from PIL import Image
 from math import radians, cos, sin, asin, sqrt, atan2, degrees
-
-
-
-
 
 r = 6371  # Radius of earth in kilometers
 direction_mapping = {'North': 0, 
