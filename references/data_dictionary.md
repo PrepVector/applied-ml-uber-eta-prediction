@@ -11,14 +11,14 @@
 |**Delivery_location_latitude**|The latitude of the delivery location|
 |**Delivery_location_longitude**|The longitude of the delivery location|
 |**Order_Date**|Date of the order|
-|**Time_Orderd**|Time the order was placed|
+|**Time_Ordered**|Time the order was placed|
 |**Time_Order_picked**|Time the order was picked|
 |**Weatherconditions**|Weather conditions of the day|
 |**Road_traffic_density**|Density of the traffic|
 |**Vehicle_condition**|Condition of the vehicle|
 |**Type_of_order**|The type of meal ordered by the customer|
 |**Type_of_vehicle**|The type of vehicle delivery partner rides|
-|**multiple_deliveries**|Amount of deliveries driver picked|
+|**Multiple_deliveries**|Amount of deliveries driver picked|
 |**Festival**|If there was a Festival or no.|
 |**City**|Type of city|
 |**Time_taken(min)**| The time taken by the delivery partner to complete the order|
