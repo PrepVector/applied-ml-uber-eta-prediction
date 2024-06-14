@@ -250,8 +250,6 @@ def get_user_input(df):
             return X
     else:
         return None
-    
-
 
 
 if __name__ == "__main__":
