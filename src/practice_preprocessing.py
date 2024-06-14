@@ -98,7 +98,7 @@ class DataProcessing:
 
         mode_imp = SimpleImputer(missing_values=np.nan, strategy='most_frequent')
         mode_cols = ["Road_traffic_density",
-                     "multiple_deliveries", "Festival", "City_type"]
+                     "Multiple_deliveries", "Festival", "City_type"]
 
         for col in mode_cols:
             df[col] = mode_imp.fit_transform(df[col].to_numpy().reshape(-1, 1)).ravel()
@@ -136,7 +136,7 @@ class DataProcessing:
         df['Time_Order_picked'] = pd.to_timedelta(df['Time_Order_picked'])
 
         df['Time_Order_picked_formatted'] = df['Order_Date'] + pd.to_timedelta(np.where(df['Time_Order_picked'] < df['Time_Ordered'], 1, 0), unit='D') + df['Time_Order_picked']
-        df['Time_Ordered_formatted'] = df['Order_Date'] + df['Time_Orderd']
+        df['Time_Ordered_formatted'] = df['Order_Date'] + df['Time_Ordered']
         df['order_prepare_time'] = (df['Time_Order_picked_formatted'] - df['Time_Ordered_formatted']).dt.total_seconds() / 60
 
         df['order_prepare_time'].fillna(df['order_prepare_time'].median(), inplace=True)

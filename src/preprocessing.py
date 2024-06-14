@@ -54,13 +54,13 @@ class DataProcessing:
         Updates the data types of the following columns in the given DataFrame df:
         - 'Delivery_person_Age' to float64
         - 'Delivery_person_Ratings' to float64
-        - 'multiple_deliveries' to float64
+        - 'Multiple_deliveries' to float64
         - 'Order_Date' to datetime with format "%d-%m-%Y"
         """
         
         df['Delivery_person_Age'] = df['Delivery_person_Age'].astype('float64')
         df['Delivery_person_Ratings'] = df['Delivery_person_Ratings'].astype('float64')
-        df['multiple_deliveries'] = df['multiple_deliveries'].astype('float64')
+        df['Multiple_deliveries'] = df['Multiple_deliveries'].astype('float64')
         df['Order_Date'] = pd.to_datetime(df['Order_Date'], format="%d-%m-%Y")
 
 
@@ -79,7 +79,7 @@ class DataProcessing:
         - Fills null values in 'Weather_conditions' with a random value from the column
         - Fills null values in 'Delivery_person_Ratings' with the column median
         - Fills null values in 'Time_Orderd' with the corresponding 'Time_Order_picked' value
-        - Fills null values in 'Road_traffic_density', 'multiple_deliveries', 'Festival', and 'City_type' with the most frequent value
+        - Fills null values in 'Road_traffic_density', 'Multiple_deliveries', 'Festival', and 'City_type' with the most frequent value
         """
         
         df['Delivery_person_Age'].fillna(np.random.choice(df['Delivery_person_Age']), inplace=True)
@@ -89,7 +89,7 @@ class DataProcessing:
 
         mode_imp = SimpleImputer(missing_values=np.nan, strategy='most_frequent')
         mode_cols = ["Road_traffic_density",
-                "multiple_deliveries", "Festival", "City_type"]
+                "Multiple_deliveries", "Festival", "City_type"]
 
         for col in mode_cols:
             df[col] = mode_imp.fit_transform(df[col].to_numpy().reshape(-1,1)).ravel()
@@ -125,7 +125,7 @@ class DataProcessing:
         df['Time_Order_picked'] = pd.to_timedelta(df['Time_Order_picked'])
 
         df['Time_Order_picked_formatted'] = df['Order_Date'] + pd.to_timedelta(np.where(df['Time_Order_picked'] < df['Time_Ordered'], 1, 0), unit='D') + df['Time_Order_picked']
-        df['Time_Ordered_formatted'] = df['Order_Date'] + df['Time_Orderd']
+        df['Time_Ordered_formatted'] = df['Order_Date'] + df['Time_Ordered']
         df['order_prepare_time'] = (df['Time_Order_picked_formatted'] - df['Time_Ordered_formatted']).dt.total_seconds() / 60
 
         df['order_prepare_time'].fillna(df['order_prepare_time'].median(), inplace=True)
