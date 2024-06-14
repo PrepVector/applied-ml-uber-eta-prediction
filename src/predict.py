@@ -1,6 +1,5 @@
 from src.preprocessing import DataProcessing
 import pickle
-import os
 
 def predict(X):
     # Load the model and scaler from the saved file

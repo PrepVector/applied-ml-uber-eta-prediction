@@ -71,7 +71,7 @@ class DataProcessing:
         Updates the data types of the following columns in the given DataFrame df:
         - 'Delivery_person_Age' to float64
         - 'Delivery_person_Ratings' to float64
-        - 'multiple_deliveries' to float64
+        - 'Multiple_deliveries' to float64
         - 'Order_Date' to datetime with format "%d-%m-%Y"
         """
 
@@ -94,7 +94,7 @@ class DataProcessing:
         df['Delivery_person_Age'].fillna(np.random.choice(df['Delivery_person_Age']), inplace=True)
         df['Weather_conditions'].fillna(np.random.choice(df['Weather_conditions']), inplace=True)
         df['Delivery_person_Ratings'].fillna(df['Delivery_person_Ratings'].median(), inplace=True)
-        df["Time_Orderd"] = df["Time_Orderd"].fillna(df["Time_Order_picked"])
+        df["Time_Ordered"] = df["Time_Ordered"].fillna(df["Time_Order_picked"])
 
         mode_imp = SimpleImputer(missing_values=np.nan, strategy='most_frequent')
         mode_cols = ["Road_traffic_density",
@@ -125,22 +125,22 @@ class DataProcessing:
     def calculate_time_diff(self, df):
         """
         Calculates the time difference between order placement and order pickup in the given DataFrame df:
-        - Converts 'Time_Orderd' and 'Time_Order_picked' to timedelta
+        - Converts 'Time_Ordered' and 'Time_Order_picked' to timedelta
         - Calculates 'Time_Order_picked_formatted' and 'Time_Ordered_formatted' based on 'Order_Date'
         - Calculates 'order_prepare_time' as the difference between 'Time_Order_picked_formatted' and 'Time_Ordered_formatted' in minutes
         - Fills null values in 'order_prepare_time' with the column median
         - Drops 'Time_Orderd', 'Time_Order_picked', 'Time_Ordered_formatted', 'Time_Order_picked_formatted', and 'Order_Date' columns
         """
         
-        df['Time_Orderd'] = pd.to_timedelta(df['Time_Orderd'])
+        df['Time_Ordered'] = pd.to_timedelta(df['Time_Ordered'])
         df['Time_Order_picked'] = pd.to_timedelta(df['Time_Order_picked'])
 
-        df['Time_Order_picked_formatted'] = df['Order_Date'] + pd.to_timedelta(np.where(df['Time_Order_picked'] < df['Time_Orderd'], 1, 0), unit='D') + df['Time_Order_picked']
+        df['Time_Order_picked_formatted'] = df['Order_Date'] + pd.to_timedelta(np.where(df['Time_Order_picked'] < df['Time_Ordered'], 1, 0), unit='D') + df['Time_Order_picked']
         df['Time_Ordered_formatted'] = df['Order_Date'] + df['Time_Orderd']
         df['order_prepare_time'] = (df['Time_Order_picked_formatted'] - df['Time_Ordered_formatted']).dt.total_seconds() / 60
 
         df['order_prepare_time'].fillna(df['order_prepare_time'].median(), inplace=True)
-        df.drop(['Time_Orderd', 'Time_Order_picked', 'Time_Ordered_formatted', 'Time_Order_picked_formatted', 'Order_Date'], axis=1, inplace=True)
+        df.drop(['Time_Ordered', 'Time_Order_picked', 'Time_Ordered_formatted', 'Time_Order_picked_formatted', 'Order_Date'], axis=1, inplace=True)
 
     
     def deg_to_rad(self, degrees):

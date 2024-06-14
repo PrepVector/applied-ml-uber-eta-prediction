@@ -106,7 +106,7 @@ def get_user_input(df):
     order_type = st.sidebar.selectbox('What is the type of order?',
                                       df['Type_of_order'].unique())
     multiple_deliveries = st.sidebar.selectbox('How many deliveries are combined?',
-                                               sorted(df['multiple_deliveries'].unique().astype('int')))
+                                               sorted(df['Multiple_deliveries'].unique().astype('int')))
 
     
     
@@ -237,14 +237,14 @@ def get_user_input(df):
                 'Delivery_location_latitude': format(float(delivery_location_latitude), ".6f"),
                 'Delivery_location_longitude': format(float(delivery_location_longitude), ".6f"),
                 'Order_Date': date.strftime('%d-%m-%Y'),
-                'Time_Orderd': order_time,
+                'Time_Ordered': order_time,
                 'Time_Order_picked': pickup_time.strftime('%H:%M:%S'),
                 'Weatherconditions': 'conditions ' + weather_conditions,
                 'Road_traffic_density': road_density,
                 'Vehicle_condition': vehicle_condition_mapping[vehicle_condition],
                 'Type_of_order': order_type,
                 'Type_of_vehicle': vehicle,
-                'multiple_deliveries': multiple_deliveries,
+                'Multiple_deliveries': multiple_deliveries,
                 'Festival': festival,
                 'City_type': city_type
             }, index=[0])
@@ -285,7 +285,7 @@ if __name__ == "__main__":
 
     if input_df is not None:
         order_date = input_df['Order_Date'][0]
-        order_time = input_df['Time_Orderd'][0]
+        order_time = input_df['Time_Ordered'][0]
         order_date_time = datetime.datetime.strptime(f'{order_date} {order_time}', '%d-%m-%Y %H:%M:%S')
         order_pickup_time = input_df['Time_Order_picked'][0]
         order_pickup_date_time = datetime.datetime.strptime(f'{order_date} {order_pickup_time}', '%d-%m-%Y %H:%M:%S')
