@@ -146,8 +146,7 @@ def get_user_input(df):
    
     valid_inputs = validate_location_inputs(delivery_location_latitude, delivery_location_longitude, restaurant_latitude, restaurant_longitude)
 
-    if valid_inputs:
-        
+    if valid_inputs:      
         
         # Getting input for delivery person
         st.sidebar.write(f"**Delivery Person Related Information**")
