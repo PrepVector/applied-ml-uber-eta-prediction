@@ -171,10 +171,10 @@ def get_user_input(df):
         
         # Create a mapping dictionary for vehicle condition to do model predictions
         vehicle_condition_mapping = {
-            'worst': 0,
-            'worse': 1,
-            'somewhat fine': 2,
-            'best': 3
+            'poor': 0,
+            'not bad': 1,
+            'good': 2,
+            'excellent': 3
         }
 
         vehicle_condition_options = list(vehicle_condition_mapping.keys())
@@ -295,8 +295,9 @@ if __name__ == "__main__":
       
         total_delivery_minutes = round(predict.predict(input_df)[0], 2)  
         minutes = int(total_delivery_minutes)
-        seconds = int((total_delivery_minutes - minutes) * 60)
-        X = order_pickup_date_time + datetime.timedelta(minutes=minutes, seconds=seconds)
+        # seconds = int((total_delivery_minutes - minutes) * 60)
+        # X = order_pickup_date_time + datetime.timedelta(minutes=minutes, seconds=seconds)
+        X = order_pickup_date_time + datetime.timedelta(minutes=minutes)
 
         # display predictions
         st.subheader(f"Order Details")
@@ -306,4 +307,6 @@ if __name__ == "__main__":
         st.subheader(f"Prediction")
         formatted_X = "{:.2f}".format(total_delivery_minutes)
         st.write(f"**Total Delivery Time is :** :blue[{formatted_X} mins]")
-        st.write(f"**Order will be delivered by :** :blue[{X}]")
+        st.write(f"**Order will be delivered at approximately :** :blue[{X.strftime('%d-%m-%Y %H:%M')}]")
+        # st.write(f"**Total Delivery Time is :** :blue[{total_delivery_minutes} mins]")
+        # st.write(f"**Order will be delivered at approximately :** :blue[{X.strftime('%d-%m-%Y %H:%M')}]")
