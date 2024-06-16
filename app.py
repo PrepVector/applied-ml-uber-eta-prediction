@@ -295,8 +295,6 @@ if __name__ == "__main__":
       
         total_delivery_minutes = round(predict.predict(input_df)[0], 2)  
         minutes = int(total_delivery_minutes)
-        # seconds = int((total_delivery_minutes - minutes) * 60)
-        # X = order_pickup_date_time + datetime.timedelta(minutes=minutes, seconds=seconds)
         X = order_pickup_date_time + datetime.timedelta(minutes=minutes)
 
         # display predictions
@@ -308,5 +306,3 @@ if __name__ == "__main__":
         formatted_X = "{:.2f}".format(total_delivery_minutes)
         st.write(f"**Total Delivery Time is :** :blue[{formatted_X} mins]")
         st.write(f"**Order will be delivered at approximately :** :blue[{X.strftime('%d-%m-%Y %H:%M')}]")
-        # st.write(f"**Total Delivery Time is :** :blue[{total_delivery_minutes} mins]")
-        # st.write(f"**Order will be delivered at approximately :** :blue[{X.strftime('%d-%m-%Y %H:%M')}]")
