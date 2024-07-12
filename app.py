@@ -33,7 +33,6 @@ def haversine(lon1, lat1, lon2, lat2):
     c = 2 * asin(sqrt(a))
     return c * r
 
-
 def calculate_delivery_location(restaurant_latitude, restaurant_longitude, distance, direction):
     """
     Calculate the delivery location's latitude and longitude based on the distance and direction from the restaurant location
