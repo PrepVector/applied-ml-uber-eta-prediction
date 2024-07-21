@@ -6,7 +6,7 @@
 |**Delivery_person_ID**|Identifier of the delivery partner|
 |**Delivery_person_Age**|Age of the delivery partner|
 |**Delivery_person_Ratings**|Ratings of the delivery partner based on past deliveries|
-|**Restaurant_latitude**Latitude coordinate of the restaurant|
+|**Restaurant_latitude**| Latitude coordinate of the restaurant|
 |**Restaurant_longitude**|Longitude coordinate of the restaurant|
 |**Delivery_location_latitude**|Latitude coordinate of the delivery location|
 |**Delivery_location_longitude**|Longitude coordinate of the delivery location|
