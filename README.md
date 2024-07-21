@@ -1,21 +1,19 @@
 # Food Delivery Time Prediction using ML
 <img src="assets/food_delivery_README.jpg" width="400">
 
-## Overview
-
-This project aims to implement a predictive model for accurately estimately the food delivery time using ML. The repository is structured with several key components for data analysis, modelling and deployment of the predictive model.
-
-**About Dataset**
-
-<font size="2">Food delivery is a courier service in which a restaurant, store, or independent food-delivery company delivers food to a customer. An order is typically made either through a restaurant or grocer's website or mobile app, or through a food ordering company. The delivered items can include entrees, sides, drinks, desserts, or grocery items and are typically delivered in boxes or bags. The delivery person will normally drive a car, but in bigger cities where homes and restaurants are closer together, they may use bikes or motorized scooters. Prompt and accurate delivery time directly impacts customer satisfaction and influences their overall experience.</font>
-
 ## Project objective
 
-<font size="2">The project aims to develop an accurate real-time food delivery time prediction system by considering crucial factors such as distance, historical delivery data, and various influencing variables. By calculating the geographical separation between the food preparation point and delivery location, we establish a foundational parameter for estimating delivery duration. Historical data on delivery times for similar distances is analyzed to identify patterns and dependencies, allowing the creation of a predictive model.
+**Background**
+<font size="2">Assume Uber is a food delivery company that was launched in 2022. The users can select a restaurant to order any of the following food items: snacks, drinks, meals, buffet. The delivery partner normally uses a bicycle, electric scooter, scooter, or motorcycle to deliver the order.
+</font>
 
-This predictive model leverages machine learning algorithms and statistical techniques to incorporate not only distance but also factors like traffic conditions, time of day, day of the week, weather conditions, and delivery partner workload.
+**Goal**
+<font size="2">Create an internal tool to estimate the time to deliver the food to the user, based on a set of given inputs. This will be used by other teams for enhancing driver experience, route optimization, capacity planning etc.
+</font>
 
-Regular updates with the latest delivery data ensure the model remains relevant and adaptable to changing conditions, making it a dynamic and responsive system. In real-time, as new orders are received and delivery partners are assigned, the model recalculates and adjusts estimated delivery times, providing customers with up-to-date and reliable information.</font>
+**Outputs**
+<font size="2">Build a machine learning model to predict the time taken to deliver the food. Deploy the application using Streamlit Community Cloud with an easy to use UI, where the time to deliver is calculated based on some user inputs. Ensure that the code is clean, well organized, and document your findings (so your future self and other team members thank you!).
+</font>
 
 ## Repository Structure
 
@@ -31,7 +29,7 @@ Regular updates with the latest delivery data ensure the model remains relevant 
 
 4. **model**: Directory for saving and loading the model.pkl file.
 
-5. **notebooks**: Google Colab notebooks for cleaning, preprocessing, feature engineering
+5. **notebooks**: Google Colab notebooks for cleaning, preprocessing, feature engineering for reference
 
 6. **references**: Contains documents with references used in the project.
 
@@ -39,8 +37,6 @@ Regular updates with the latest delivery data ensure the model remains relevant 
     - **preprocessing**: Functionality to preprocess, feature engineering, modelling on a raw dataset
     - **build_model**: Creates and saves the model.pkl file from the preprocessed dataset
     - **predict**: Predictions of saved model.pkl on new user input
-    - **practice_preprocessing**: Replica of preprocessing.py (for student)
-    - **run_practice_preprocessing**: Replica of build_model.py (for student)
 
 8. **app.py**: Streamlit frontend
 
@@ -71,14 +67,6 @@ Regular updates with the latest delivery data ensure the model remains relevant 
 |**City_type**|Type of city, example metropolitan, semi-urban, urban.|
 |**Time_taken(min)**| The time taken by the delivery partner to complete the order|
 
-## Decision-making process
-
-The primary goal of the project was to develop an effective prediction model for estimating order delivery times in minutes, utilizing a combination of diverse features as predictors. This endeavor involved applying various transformation techniques, conducting feature engineering, and selecting features to uncover concealed patterns and correlations among them.
-
-By exploiting these discovered relationships, the objective was to construct a resilient prediction model capable of accurately estimating delivery times for individual orders. The project aimed to transcend mere data analysis and delve into the underlying factors influencing delivery times, thereby enabling more precise predictions and improving overall operational efficiency.
-
-The entire process of tackling the problem and progressing towards a solution was thoroughly documented in a series of notebooks. Each notebook delineated a distinct stage of the project, outlining the systematic approach employed to analyze, transform, engineer, and select features for the prediction model.
-
 **Notebooks:**
 
 1. [problem_statement](https://github.com/PrepVector/applied-ml-uber-eta-prediction/blob/main/notebooks/00_problem_statement.ipynb)
@@ -93,10 +81,7 @@ The entire process of tackling the problem and progressing towards a solution wa
 
 6. [preprocessing_modelling_feature_selection](https://github.com/PrepVector/applied-ml-uber-eta-prediction/blob/main/notebooks/04_preprocessing_modelling_feature_selection.ipynb)
 
-These notebooks acted as thorough documentation of the methodologies utilized, detailing any preprocessing techniques applied to the data, transformation methods employed for features, and strategies implemented for feature engineering.
-
-Moreover, the notebooks recorded the precise algorithms, models, or techniques employed for prediction. This documentation not only promoted transparency and reproducibility but also served as a valuable asset for future reference, enabling effortless sharing of insights, methodologies, and discoveries with peers and stakeholders. By systematically documenting the entire project within these notebooks, it ensured a comprehensive comprehension of the process and established a basis for future enhancements and iterations.
-
+These notebooks are a replica of the app version of the Uber ETA Prediction. The notebooks showcase data cleaning, exploratory data analysis, feature engineering, model selection in greater detail. 
 
 ## Setting Up the Project
 
@@ -115,13 +100,13 @@ Moreover, the notebooks recorded the precise algorithms, models, or techniques e
 2. Build the Docker image:
 
     ```bash
-    docker build -t food_delivery_time .
+    docker build -t fdt:latest .
     ```
 
 3. Run the Docker container:
 
     ```bash
-    docker run -p 8501:8501 food_delivery_time
+    docker run -it --rm --name "food_delivery_time" -p 8501:8501 fdt:latest
     ```
 
 4. Access the Streamlit app in your web browser at [http://localhost:8501](http://localhost:8501).
